@@ -1,3 +1,7 @@
 window.addEventListener('scroll', function () {
-    console.log(document.documentElement.scrollTop);
+    if (document.documentElement.scrollTop === 0) {
+        document.body.classList.add('body-is-scroll-top');
+    } else {
+        document.body.classList.remove('body-is-scroll-top');
+    }
 });
