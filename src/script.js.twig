@@ -5,3 +5,9 @@ window.addEventListener('scroll', function () {
         document.body.classList.remove('body-is-scroll-top');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.documentElement.scrollTop === 0) {
+        document.body.classList.add('body-is-scroll-top');
+    }
+}, false);
