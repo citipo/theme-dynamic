@@ -1,0 +1,44 @@
+{
+    "name": {
+        "en": "Dynamic",
+        "fr": "Dynamique"
+    },
+    "description": {
+        "en": "The main image or video hightlights the logo. The header is see-through to give structure.",
+        "fr": "L'image ou la vidéo principale met en avant le logo. Le menu est en opacité pour donner de la structure."
+    },
+    "defaultColors": {
+        "primary": "00BAFF",
+        "secondary": "FF4A4A",
+        "third": "00BAFF"
+    },
+    "defaultFonts": {
+        "title": "Roboto",
+        "text": "Roboto"
+    },
+    "thumbnail": "thumbnail.jpg",
+    "templates": {
+        "style": "src/style.css.twig",
+        "script": "src/script.js.twig",
+        "head": "src/head.html.twig",
+        "layout": "src/layout.html.twig",
+        "header": "src/header.html.twig",
+        "footer": "src/footer.html.twig",
+        "list": "src/list.html.twig",
+        "content": "src/content.html.twig",
+        "home": "src/home.html.twig",
+        "home-calls-to-action": "src/home/calls-to-action.html.twig",
+        "home-custom-content": "src/home/custom-content.html.twig",
+        "home-newsletter": "src/home/newsletter.html.twig",
+        "home-posts": "src/home/posts.html.twig",
+        "home-events": "src/home/events.html.twig",
+        "home-socials": "src/home/socials.html.twig",
+        "manifesto-list": "src/manifesto/list.html.twig",
+        "manifesto-view": "src/manifesto/view.html.twig",
+        "trombinoscope-list": "src/trombinoscope/list.html.twig",
+        "trombinoscope-view": "src/trombinoscope/view.html.twig"
+    },
+    "assets": [
+        "assets/home-default.jpg"
+    ]
+}

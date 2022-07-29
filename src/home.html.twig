@@ -1,0 +1,49 @@
+<div class="home">
+    <div class="home-jumbo"
+         style="background-image: url('{{ jumbo_image|default(citipo_theme_asset_url('assets/home-default.jpg')) }}');">
+        {% if jumbo_video %}
+            <div class="home-jumbo-video">
+                <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+                    <source src="{{ jumbo_video }}" type="video/mp4">
+                </video>
+            </div>
+        {% endif %}
+
+        {% if jumbo_overlay %}
+            <div class="home-jumbo-overlay"></div>
+        {% endif %}
+
+        <div class="home-jumbo-intro-container">
+            <div class="home-jumbo-intro-logo-container" data-aos="fade-up" data-aos-duration="600">
+                <div class="home-jumbo-intro-logo">
+                    <span class="home-jumbo-intro-logo-sacha">Sacha</span>
+                    <span class="home-jumbo-intro-logo-houlie">Houlié</span>
+                    <span class="home-jumbo-intro-logo-avec">avec</span>
+                    <span class="home-jumbo-intro-logo-vous">vous</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-jumbo-intro-slogan" data-aos="fade-up" data-aos-duration="600">
+            {{ jumbo_content|raw }}
+        </div>
+    </div>
+
+    <div class="home-blocks">
+        {% for key, block in blocks %}
+            {% if 'home-block-why' in block.content %}
+                <div class="home-block-why-container">
+                    {{ block.content|raw }}
+                </div>
+            {% elseif 'home-block-supporters' in block.content %}
+                <div class="home-block-supporters-container">
+                    {{ block.content|raw }}
+                </div>
+            {% else %}
+                <div class="container">
+                    {{ block.content|raw }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

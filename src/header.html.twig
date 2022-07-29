@@ -1,0 +1,115 @@
+<header class="header">
+    <div class="header-layer">
+        <div class="header-view" data-controller="mobile-menu">
+            <div class="row align-items-stretch no-gutters">
+
+                {# Logo #}
+                <div class="col-9 col-lg-auto header-view-logo">
+                    <a href="{{ homepage_url }}" data-turbo="optional">
+                        {{ current_project.metaTitle }}
+                    </a>
+                </div>
+
+                {# Mobile menu button #}
+                <div class="d-block d-lg-none col-3 header-view-menu text-right">
+                    <button type="button" class="btn btn-link header-mobile-button"
+                            data-mobile-menu-target="button">
+                        <svg aria-hidden="true" focusable="false" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                  d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                {# Desktop menu #}
+                <div class="d-none d-lg-flex col-lg header-view-menu">
+                    <nav class="menu">
+                        <ul class="header-menu"
+                            data-controller="menu"
+                            data-cookie="{{ membership.cookie_name }}">
+                            {% for item in current_project.header %}
+                                <li>
+                                    <div class="header-menu-label {{ item.label == 'Je donne' ? 'header-menu-label-donation' }}">
+                                        <a href="{{ item.url }}" data-turbo="optional"
+                                           {% if item.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                            {{ item.label }}
+                                        </a>
+
+                                        {% if item.children|length > 0 %}
+                                            <i class="fal fa-angle-down"></i>
+                                        {% endif %}
+                                    </div>
+
+                                    {% if item.children|length > 0 %}
+                                        <div class="header-menu-submenu">
+                                            <ul>
+                                                {% for child in item.children %}
+                                                    <li>
+                                                        <a href="{{ child.url }}" data-turbo="optional"
+                                                           {% if child.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                                            {{ child.label }}
+                                                        </a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+
+                            <li class="ml-auto">
+                                <div class="header-menu-label header-menu-label-je-mengage">
+                                    <a href="/je-mengage" data-turbo="optional">
+                                        Je m'engage
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="header-menu-label header-menu-label-je-donne">
+                                    <a href="/je-donne" data-turbo="optional">
+                                        Je fais un don
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                {# Mobile menu #}
+                <div class="d-lg-none col-12" style="display: none;"
+                     data-mobile-menu-target="menu">
+                    <nav class="menu">
+                        <ul class="header-mobile">
+                            {% for item in current_project.header %}
+                                <li>
+                                    <a href="{{ item.url }}" data-turbo="optional"
+                                       {% if item.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                        {{ item.label }}
+                                    </a>
+
+                                    {% if item.children|length > 0 %}
+                                        <div class="header-mobile-submenu">
+                                            <ul>
+                                                {% for child in item.children %}
+                                                    <li>
+                                                        <a href="{{ child.url }}" data-turbo="optional"
+                                                           {% if child.openNewTab %}target="_blank"
+                                                           rel="noopener noreferrer"{% endif %}>
+                                                            {{ child.label }}
+                                                        </a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

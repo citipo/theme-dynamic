@@ -1,0 +1,499 @@
+@font-face {
+    font-family: 'Maax';
+    src: url('https://assets.legislatives-avecvous.fr/maax-bold-webfont.woff2') format('woff2'),
+         url('https://assets.legislatives-avecvous.fr/maax-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('https://assets.legislatives-avecvous.fr/maax-bolditalic-webfont.woff2') format('woff2'),
+         url('https://assets.legislatives-avecvous.fr/maax-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('https://assets.legislatives-avecvous.fr/maax-italic-webfont.woff2') format('woff2'),
+         url('https://assets.legislatives-avecvous.fr/maax-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('https://assets.legislatives-avecvous.fr/maax-regular-webfont.woff2') format('woff2'),
+         url('https://assets.legislatives-avecvous.fr/maax-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .home-blocks-block-cta-button, .btn {
+    font-family: Maax, Roboto, Segoe UI, Source Sans Pro, Calibri, Candara, Arial, sans-serif;
+}
+
+label.required::after {
+    content: '*' !important;
+}
+
+.box-offset {
+    margin: 0;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.box-offset::before {
+    margin: 0;
+    background: none;
+}
+
+.frc-captcha {
+    max-width: 100% !important;
+    border: 1px solid #dee2e6 !important;
+    background-color: #fafafa !important;
+}
+
+.btn {
+    padding: 8px 24px;
+    border-radius: 5px;
+}
+
+.body-home-index .header {
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+}
+
+.header-view {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+.header-view-logo {
+    background: #00BAFF;
+    padding: 5px 10px !important;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .header-view-logo {
+        padding: 5px 30px !important;
+    }
+}
+.header-view-logo a, .header-view-logo a:hover {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+@media (min-width: 992px) {
+    .header-view-logo a, .header-view-logo a:hover {
+        font-size: 28px;
+    }
+}
+.header-view-menu {
+    align-items: center;
+    background: rgba(0, 10, 43, 0.5);
+}
+.header-view-menu a, .header-view-menu a:hover, .header-mobile-button {
+    color: #fff;
+}
+.header-view-menu a:hover {
+    text-decoration: underline;
+}
+.header .menu {
+    width: 100%;
+}
+.header-menu {
+    margin: 0 20px;
+    display: flex;
+}
+.header-menu a {
+    padding: 8px 20px;
+}
+
+.header-menu-label-je-mengage a {
+    background: var(--primary);
+    color: #fff !important;
+}
+.header-menu-label-je-donne a {
+    background: var(--secondary);
+    color: #fff !important;
+}
+
+.home-jumbo {
+    background-size: cover;
+    background-position: 72% 10% !important;
+    background-color: #000;
+    height: 90vh;
+    position: relative;
+    z-index: 10;
+}
+@media (min-width: 992px) {
+    .home-jumbo {
+        height: 80vh;
+        min-height: 670px;
+        background-position: 50% 50%;
+    }
+}
+
+.home-jumbo-video {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+}
+.home-jumbo-video video {
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: 12;
+}
+
+.home-jumbo-overlay {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(12, 34, 71, 0.2), rgba(33, 32, 33, 0.75));
+}
+
+.home-jumbo-buttons .home-blocks-block-cta {
+    margin: 0 0 20px 0 !important;
+}
+.home-blocks-block-cta-button {
+    padding: 8px 24px;
+    border-radius: 5px;
+}
+
+.home-jumbo-intro {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro {
+        align-items: center;
+    }
+}
+
+.home-jumbo-intro-container {
+    position: absolute;
+    z-index: 30;
+    height: 100%;
+    width: 100%;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro-container {
+        justify-content: center;
+    }
+}
+
+.home-jumbo-intro-logo-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+.home-jumbo-intro-logo {
+    width: 200px;
+    margin: 0 auto 100px auto;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro-logo {
+        width: 450px;
+        margin: 0 0 150px 0;
+    }
+}
+.home-jumbo-intro-logo span {
+    display: block;
+    font-weight: 800;
+    line-height: 0.7;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 8px 36px;
+}
+.home-jumbo-intro-logo-sacha {
+    margin: 0 0 10px 40px;
+    color: #fff;
+    font-size: 40px !important;
+}
+.home-jumbo-intro-logo-houlie {
+    color: #fff;
+    font-size: 60px !important;
+}
+.home-jumbo-intro-logo-avec {
+    margin-left: 40px;
+    color: #00BAFF;
+    font-size: 60px !important;
+}
+.home-jumbo-intro-logo-vous {
+    margin-left: 80px;
+    color: #00BAFF;
+    font-size: 60px !important;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro-logo-sacha {
+        margin: 0 0 15px 60px;
+        font-size: 70px !important;
+    }
+    .home-jumbo-intro-logo-houlie {
+        font-size: 90px !important;
+    }
+    .home-jumbo-intro-logo-avec {
+        font-size: 90px !important;
+    }
+    .home-jumbo-intro-logo-vous {
+        font-size: 90px !important;
+    }
+}
+
+.home-jumbo-logo {
+    max-width: 470px;
+}
+
+.home-jumbo-intro-slogan {
+    position: absolute;
+    z-index: 30;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    text-shadow: rgb(0, 0, 0) 0 8px 36px;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro-slogan {
+        bottom: 170px;
+        font-size: 32px;
+    }
+}
+
+.home-blocks {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+.home-blocks-block {
+    margin: 0;
+}
+
+@media (min-width: 992px) {
+    .home-blocks {
+        position: relative;
+        z-index: 80;
+        margin-top: -150px;
+    }
+}
+
+.home-block-why-container {
+    background: linear-gradient(90deg, #00BAFF 0%, #000A2B 100%) 0 0 no-repeat;
+    padding-top: 330px;
+    margin-top: -250px;
+    padding-bottom: 90px;
+    margin-bottom: 0;
+}
+.home-block-why {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+    color: #fff;
+}
+.home-block-why h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 8px 36px;
+    margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+    .home-block-why h1 {
+        font-size: 70px;
+    }
+}
+
+.home-block-supporters-container {
+    background: #e2e3e7;
+    padding-top: 380px;
+    margin-top: -315px;
+    padding-bottom: 280px;
+}
+.home-block-supporters {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+.home-block-supporters h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--third);
+    margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+    .home-block-supporters h1 {
+        font-size: 70px;
+    }
+}
+
+.home-blocks-block-newsletter {
+    background: #fff;
+    color: #444;
+    margin-top: -150px;
+}
+.home-blocks-block-newsletter-title {
+    font-size: 36px;
+    margin-bottom: 0;
+    padding: 30px;
+    color: var(--third);
+}
+@media (min-width: 992px) {
+    .home-blocks-block-newsletter-title {
+        font-size: 54px;
+    }
+}
+.home-blocks-block-newsletter-form {
+    padding: 44px;
+}
+.home-blocks-block-newsletter-inputs {
+    display: flex;
+    flex-direction: column;
+}
+.home-blocks-block-newsletter-inputs .form-group {
+    min-width: 35%;
+}
+.home-blocks-block-newsletter .btn {
+    color: #fff;
+    background-color: #1d95d6;
+    border-color: #1d95d6;
+}
+.home-blocks-block-newsletter .btn:hover {
+    color: #fff;
+    background-color: #1777ab;
+    border-color: #1777ab;
+}
+.home-blocks-block-newsletter-image {
+    display: none;
+}
+
+.home-project {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px 30px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+.home-project h2 {
+    font-size: 3rem;
+    color: var(--primary);
+}
+.home-project p {
+    font-size: 2rem;
+}
+
+.home-blocks-block-posts-item {
+    padding: 0;
+}
+.home-blocks-block-posts-item-thumbnail {
+    margin-bottom: 0;
+}
+.home-blocks-block-posts-item-thumbnail img {
+    border-radius: 15px 15px 0 0;
+}
+.home-blocks-block-posts-item-text {
+    padding: 15px;
+}
+.home-blocks-block-socials-block,
+.home-blocks-block-posts-item,
+.list-items-item,
+.content-more-item {
+    border: 0;
+    margin-bottom: 30px;
+}
+.home-blocks-block-socials-block iframe {
+    border-radius: 15px;
+}
+.home-timer-values h1 {
+    margin: 0 !important;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.home-timer-values p {
+    margin: 0 !important;
+}
+
+.footer-menu {
+    background: #fff !important;
+    text-align: left !important;
+    font-family: Maax, Roboto, Segoe UI, Source Sans Pro, Calibri, Candara, Arial, sans-serif !important;
+}
+.footer-menu, .footer-menu a, .footer-menu a:hover {
+    color: #00294D;
+}
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+.footer-top-logo-image {
+    max-width: 170px;
+    max-height: 170px;
+}
+.footer-menu-column-title {
+    font-size: 24px;
+    font-family: Maax, Roboto, Segoe UI, Source Sans Pro, Calibri, Candara, Arial, sans-serif !important;
+}
+@media (min-width: 992px) {
+    .footer-top-socials {
+        position: fixed;
+        top: 120px;
+        left: 40px;
+        z-index: 99;
+        font-size: 18px;
+    }
+
+    .footer-top-socials a {
+        display: flex;
+        border: 0;
+        opacity: 1;
+        width: 34px;
+        height: 34px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+    }
+}
+
+.manifesto-topic-proposal-number {
+    display: none;
+}
+
+.list-items-item-date {
+    display: none;
+}
+.list-items-item-image {
+    border-radius: 5px;
+}
+
+.trombinoscope-persons-grid-item::before {
+    display: none;
+}

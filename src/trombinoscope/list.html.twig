@@ -1,0 +1,37 @@
+<div class="trombinoscope trombinoscope-persons" data-aos="fade-up" data-aos-duration="600">
+    <h1 class="trombinoscope-persons-title">
+        {{ trombinoscope_title }}
+    </h1>
+
+    <div class="trombinoscope-persons-social-sharers">
+        {{ social_sharers|raw }}
+    </div>
+
+    <div class="row">
+        {% for key, person in trombinoscope -%}
+            <div class="col-lg-2">
+                <div class="zoom-hover">
+                    <div data-aos="fade-up" data-aos-duration="600">
+                        <div class="home-blocks-block-posts-item box-offset">
+                            {% if person.image %}
+                                <div class="home-blocks-block-posts-item-thumbnail">
+                                    <img src="{{ person.image }}"
+                                         class="list-items-item-image" width="1080" height="1080" />
+                                </div>
+                            {% endif %}
+
+                            <div class="home-blocks-block-posts-item-text">
+                                <a href="{{ person.url }}" data-turbo="optional"
+                                   class="stretched-link list-items-item-link">
+                                    <h5 class="list-items-item-title">
+                                        <span>{{ person.fullName }}</span>
+                                    </h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {%- endfor %}
+    </div>
+</div>

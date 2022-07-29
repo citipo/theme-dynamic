@@ -1,0 +1,45 @@
+/** @var countdown */
+
+countdown.setLabels(
+    ' milliseconde| seconde| minute| heure| jour| semaine| mois| année| décennie| siècle| millénaire',
+    ' millisecondes| secondes| minutes| heures| jours| semaines| mois| années| décennies| siècles| millénaires',
+    ' et ',
+    ', ',
+    'maintenant'
+);
+
+var countdownTimer = null;
+var view = {
+    days: null,
+    hours: null,
+    minutes: null,
+    seconds: null
+};
+
+document.addEventListener('turbo:load', function () {
+    if (countdownTimer) {
+        clearInterval(countdownTimer);
+    }
+
+    view = {
+        days: document.getElementById('home-timer-days'),
+        hours: document.getElementById('home-timer-hours'),
+        minutes: document.getElementById('home-timer-minutes'),
+        seconds: document.getElementById('home-timer-seconds')
+    };
+
+    if (!view.days || !view.hours || !view.minutes || !view.seconds) {
+        return;
+    }
+
+    countdownTimer = countdown(
+        new Date('2022-06-12T08:00:00'),
+        function (ts) {
+            view.days.innerText = ts.days;
+            view.hours.innerText = ts.hours;
+            view.minutes.innerText = ts.minutes;
+            view.seconds.innerText = ts.seconds;
+        },
+        countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS
+    );
+});
