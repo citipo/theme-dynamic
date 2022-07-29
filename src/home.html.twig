@@ -32,8 +32,12 @@
 
     <div class="home-blocks {{ overlap ? 'home-blocks-overlap' }}">
         {% for key, block in blocks %}
-            {% if key != 0 or block.type != 'cta' %}
-                {{ block.content|raw }}
+            {% if block.type != 'cta' %}
+                <div class="home-blocks-section home-blocks-section-{{ key }}">
+                    <div class="home-blocks-container">
+                        {{ block.content|raw }}
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
