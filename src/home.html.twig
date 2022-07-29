@@ -15,12 +15,8 @@
 
         <div class="home-jumbo-intro-container">
             <div class="home-jumbo-intro-logo-container" data-aos="fade-up" data-aos-duration="600">
-                <div class="home-jumbo-intro-logo">
-                    <span class="home-jumbo-intro-logo-sacha">Sacha</span>
-                    <span class="home-jumbo-intro-logo-houlie">Houlié</span>
-                    <span class="home-jumbo-intro-logo-avec">avec</span>
-                    <span class="home-jumbo-intro-logo-vous">vous</span>
-                </div>
+                <img src="{{ current_project.logoDark }}"
+                     class="home-jumbo-intro-logo" />
             </div>
         </div>
 
@@ -29,20 +25,15 @@
         </div>
     </div>
 
-    <div class="home-blocks">
+    {% set overlap = (
+        blocks[0] is defined and blocks[0].type == 'newsletter'
+        or (blocks[0] is defined and blocks[0].type == 'cta' and blocks[1] is defined and blocks[1].type == 'newsletter')
+    ) %}
+
+    <div class="home-blocks {{ overlap ? 'home-blocks-overlap' }}">
         {% for key, block in blocks %}
-            {% if 'home-block-why' in block.content %}
-                <div class="home-block-why-container">
-                    {{ block.content|raw }}
-                </div>
-            {% elseif 'home-block-supporters' in block.content %}
-                <div class="home-block-supporters-container">
-                    {{ block.content|raw }}
-                </div>
-            {% else %}
-                <div class="container">
-                    {{ block.content|raw }}
-                </div>
+            {% if key != 0 or block.type != 'cta' %}
+                {{ block.content|raw }}
             {% endif %}
         {% endfor %}
     </div>
