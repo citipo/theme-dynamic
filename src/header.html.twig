@@ -66,9 +66,9 @@
                             {% endfor %}
 
                             <li class="ml-auto">
-                                {% if cta.primary %}
-                                    <div class="header-menu-label header-menu-label-je-mengage">
-                                        <a href="{{ cta.primary.url }}" data-turbo="optional"
+                                {% if cta.primary.label %}
+                                    <div class="header-menu-label header-menu-label-primary">
+                                        <a href="{{ cta.primary.target }}" data-turbo="optional"
                                            {% if cta.primary.openNewTab %}target="_blank" rel="noreferrer noopener"{% endif %}>
                                             {{ cta.primary.label }}
                                         </a>
@@ -77,11 +77,14 @@
                             </li>
 
                             <li>
-                                <div class="header-menu-label header-menu-label-je-donne">
-                                    <a href="/je-donne" data-turbo="optional">
-                                        Je fais un don
-                                    </a>
-                                </div>
+                                {% if cta.secondary.label %}
+                                    <div class="header-menu-label header-menu-label-secondary">
+                                        <a href="{{ cta.secondary.target }}" data-turbo="optional"
+                                           {% if cta.secondary.openNewTab %}target="_blank" rel="noreferrer noopener"{% endif %}>
+                                            {{ cta.secondary.label }}
+                                        </a>
+                                    </div>
+                                {% endif %}
                             </li>
                         </ul>
                     </nav>
