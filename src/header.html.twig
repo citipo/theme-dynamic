@@ -68,8 +68,13 @@
                             <li class="ml-auto">
                                 {% if cta.primary.label %}
                                     <div class="header-menu-label header-menu-label-primary">
-                                        <a href="{{ cta.primary.target }}" data-turbo="optional"
-                                           {% if cta.primary.openNewTab %}target="_blank" rel="noreferrer noopener"{% endif %}>
+                                        <a href="{{ cta.primary.target }}"
+                                            {% if cta.primary.openNewTab %}
+                                                target="_blank" rel="noreferrer noopener"
+                                            {% else %}
+                                                data-turbo="optional"
+                                            {% endif %}
+                                        >
                                             {{ cta.primary.label }}
                                         </a>
                                     </div>
@@ -79,8 +84,13 @@
                             <li>
                                 {% if cta.secondary.label %}
                                     <div class="header-menu-label header-menu-label-secondary">
-                                        <a href="{{ cta.secondary.target }}" data-turbo="optional"
-                                           {% if cta.secondary.openNewTab %}target="_blank" rel="noreferrer noopener"{% endif %}>
+                                        <a href="{{ cta.secondary.target }}"
+                                            {% if cta.secondary.openNewTab %}
+                                                target="_blank" rel="noreferrer noopener"
+                                            {% else %}
+                                                data-turbo="optional"
+                                            {% endif %}
+                                        >
                                             {{ cta.secondary.label }}
                                         </a>
                                     </div>
