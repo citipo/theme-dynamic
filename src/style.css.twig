@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Maax';
     src: url('https://assets.legislatives-avecvous.fr/maax-bold-webfont.woff2') format('woff2'),
-    url('https://assets.legislatives-avecvous.fr/maax-bold-webfont.woff') format('woff');
+         url('https://assets.legislatives-avecvous.fr/maax-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'Maax';
     src: url('https://assets.legislatives-avecvous.fr/maax-bolditalic-webfont.woff2') format('woff2'),
-    url('https://assets.legislatives-avecvous.fr/maax-bolditalic-webfont.woff') format('woff');
+         url('https://assets.legislatives-avecvous.fr/maax-bolditalic-webfont.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'Maax';
     src: url('https://assets.legislatives-avecvous.fr/maax-italic-webfont.woff2') format('woff2'),
-    url('https://assets.legislatives-avecvous.fr/maax-italic-webfont.woff') format('woff');
+         url('https://assets.legislatives-avecvous.fr/maax-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'Maax';
     src: url('https://assets.legislatives-avecvous.fr/maax-regular-webfont.woff2') format('woff2'),
-    url('https://assets.legislatives-avecvous.fr/maax-regular-webfont.woff') format('woff');
+         url('https://assets.legislatives-avecvous.fr/maax-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -206,62 +206,22 @@ label.required::after {
 }
 
 .home-jumbo-intro-logo-container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1140px;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .home-jumbo-intro-logo-container {
+        text-align: left;
+    }
 }
 
 .home-jumbo-intro-logo {
     width: 200px;
-    margin: 0 auto 100px auto;
+    margin: 0 0 30px 0;
 }
 @media (min-width: 992px) {
     .home-jumbo-intro-logo {
-        width: 450px;
-        margin: 0 0 150px 0;
-    }
-}
-.home-jumbo-intro-logo span {
-    display: block;
-    font-weight: 800;
-    line-height: 0.7;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 8px 36px;
-}
-.home-jumbo-intro-logo-sacha {
-    margin: 0 0 10px 40px;
-    color: #fff;
-    font-size: 40px !important;
-}
-.home-jumbo-intro-logo-houlie {
-    color: #fff;
-    font-size: 60px !important;
-}
-.home-jumbo-intro-logo-avec {
-    margin-left: 40px;
-    color: #00BAFF;
-    font-size: 60px !important;
-}
-.home-jumbo-intro-logo-vous {
-    margin-left: 80px;
-    color: #00BAFF;
-    font-size: 60px !important;
-}
-@media (min-width: 992px) {
-    .home-jumbo-intro-logo-sacha {
-        margin: 0 0 15px 60px;
-        font-size: 70px !important;
-    }
-    .home-jumbo-intro-logo-houlie {
-        font-size: 90px !important;
-    }
-    .home-jumbo-intro-logo-avec {
-        font-size: 90px !important;
-    }
-    .home-jumbo-intro-logo-vous {
-        font-size: 90px !important;
+        width: 250px;
+        margin: 0 0 30px 0;
     }
 }
 
@@ -284,6 +244,7 @@ label.required::after {
     .home-jumbo-intro-slogan {
         bottom: 170px;
         font-size: 32px;
+        text-align: left;
     }
 }
 
@@ -366,11 +327,12 @@ label.required::after {
     border: 0;
     margin-bottom: 30px;
 }
-.home-blocks-block-socials-block iframe {
-    border-radius: 15px;
-}
 .home-blocks-block-socials-block {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.home-blocks-block-socials-block iframe {
+    border-radius: 15px;
 }
 
 .footer-top-socials-rss, .footer-top-logo-text, .footer-top-logo-image {
