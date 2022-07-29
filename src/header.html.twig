@@ -58,12 +58,22 @@
                                 </li>
                             {% endfor %}
 
+                            {% set cta = null %}
+                            {% for block in current_project.home %}
+                                {% if block.type == 'cta' %}
+                                    {% set cta = block.config %}
+                                {% endif %}
+                            {% endfor %}
+
                             <li class="ml-auto">
-                                <div class="header-menu-label header-menu-label-je-mengage">
-                                    <a href="/je-mengage" data-turbo="optional">
-                                        Je m'engage
-                                    </a>
-                                </div>
+                                {% if cta.primary %}
+                                    <div class="header-menu-label header-menu-label-je-mengage">
+                                        <a href="{{ cta.primary.url }}" data-turbo="optional"
+                                           {% if cta.primary.openNewTab %}target="_blank" rel="noreferrer noopener"{% endif %}>
+                                            {{ cta.primary.label }}
+                                        </a>
+                                    </div>
+                                {% endif %}
                             </li>
 
                             <li>
