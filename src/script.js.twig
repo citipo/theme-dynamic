@@ -1,0 +1,9 @@
+var stickyEl = new Sticksy('.header');
+
+stickyEl.onStateChanged = function (state) {
+    if (state === 'fixed') {
+        stickyEl.nodeRef.classList.add('header-fixed')
+    } else {
+        stickyEl.nodeRef.classList.remove('header-fixed')
+    }
+}
