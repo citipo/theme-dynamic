@@ -113,24 +113,24 @@ label.required::after {
     padding: 8px 20px;
 }
 
-.header-menu-label-primary a, .header-mobile-cta-primary a {
+.header-menu-label-primary a, .header-mobile-cta-primary {
     background: var(--primary);
     color: #fff !important;
 }
-.header-menu-label-secondary a, .header-mobile-cta-secondary a {
+.header-menu-label-secondary a, .header-mobile-cta-secondary {
     background: var(--secondary);
     color: #fff !important;
 }
 
 .header-mobile-cta-container {
     display: flex;
+    justify-content: stretch;
+    align-items: stretch;
     margin-top: 5px;
 }
 .header-mobile-cta-primary, .header-mobile-cta-secondary {
     flex-basis: 0;
     flex-grow: 1;
-}
-.header-mobile-cta-primary a, .header-mobile-cta-secondary a {
     display: block;
     padding: 8px 20px;
     text-align: center;
