@@ -131,33 +131,35 @@
                             {% endfor %}
                         </ul>
 
-                        {% if cta.primary.label %}
-                            <div class="header-menu-label header-menu-label-primary">
-                                <a href="{{ cta.primary.target }}"
+                        <div class="header-mobile-cta-container">
+                            {% if cta.primary.label %}
+                                <div class="header-mobile-cta header-mobile-cta-primary">
+                                    <a href="{{ cta.primary.target }}"
                                         {% if cta.primary.openNewTab %}
                                             target="_blank" rel="noreferrer noopener"
                                         {% else %}
                                             data-turbo="optional"
                                         {% endif %}
-                                >
-                                    {{ cta.primary.label }}
-                                </a>
-                            </div>
-                        {% endif %}
+                                    >
+                                        {{ cta.primary.label }}
+                                    </a>
+                                </div>
+                            {% endif %}
 
-                        {% if cta.secondary.label %}
-                            <div class="header-menu-label header-menu-label-secondary">
-                                <a href="{{ cta.secondary.target }}"
+                            {% if cta.secondary.label %}
+                                <div class="header-mobile-cta header-mobile-cta-secondary">
+                                    <a href="{{ cta.secondary.target }}"
                                         {% if cta.secondary.openNewTab %}
                                             target="_blank" rel="noreferrer noopener"
                                         {% else %}
                                             data-turbo="optional"
                                         {% endif %}
-                                >
-                                    {{ cta.secondary.label }}
-                                </a>
-                            </div>
-                        {% endif %}
+                                    >
+                                        {{ cta.secondary.label }}
+                                    </a>
+                                </div>
+                            {% endif %}
+                        </div>
                     </nav>
                 </div>
             </div>
