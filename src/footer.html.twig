@@ -44,7 +44,10 @@
                 {% for item in current_project.footer %}
                     <div class="col-12 col-lg-3 footer-menu-column">
                         <div class="footer-menu-column-title">
-                            {{ item.label }}
+                            <a href="{{ item.url }}" data-turbo="optional"
+                               {% if item.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                  {{ item.label }}
+                            </a>
                         </div>
 
                         {% if item.children|length > 0 %}
